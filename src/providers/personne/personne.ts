@@ -13,13 +13,18 @@ import { of } from 'rxjs/Observable/of';
 @Injectable()
 export class PersonneProvider {
 
+  personnes : Array<Personne> = [
+    new Personne("John", "Doe", "john.doe@mail.com"),
+    new Personne("Jane", "Doe", "jane.doe@mail.com"),
+    new Personne("Jean", "Michel", "jean.michel@mail.com")
+  ];
+
   constructor(public http: HttpClient) {
     console.log('Hello PersonneProvider Provider');
   }
 
   getAll() : Observable<Personne[]> {
-    var personnes : Array<Personne> = [new Personne("John", "Doe", "john.doe@mail.com"), new Personne("Jane", "Doe", "jane.doe@mail.com")];
-    return of(personnes);
+    return of(this.personnes);
   }
 
 }

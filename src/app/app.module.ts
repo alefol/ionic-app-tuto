@@ -12,8 +12,7 @@ import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 import { LoginPage } from '../pages/login/login';
 import { PersonneProvider } from '../providers/personne/personne';
-import { PersonnesComponent } from '../components/personnes/personnes';
-import { PersonnePage } from '../pages/personne/personne';
+import { PersonnesPage } from '../pages/personnes/personnes';
 import { ComponentsModule } from '../components/components.module';
 import { HttpClientModule } from '@angular/common/http';
 
@@ -25,7 +24,7 @@ import { HttpClientModule } from '@angular/common/http';
     HomePage,
     LoginPage,
     TabsPage,
-    PersonnePage
+    PersonnesPage
   ],
   imports: [
     BrowserModule,
@@ -41,7 +40,7 @@ import { HttpClientModule } from '@angular/common/http';
     HomePage,
     TabsPage,
     LoginPage,
-    PersonnePage
+    PersonnesPage
   ],
   providers: [
     StatusBar,
